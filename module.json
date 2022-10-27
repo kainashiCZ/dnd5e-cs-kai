@@ -1,0 +1,35 @@
+{
+  "name": "dnd5e-cs-kai",
+  "title": "DnD5e - cs-CZ - Kai's invasive edition",
+  "description": "Add Czech language to DnD5e with better support for Czech language.",
+  "version": "0.3.0",
+  "compatibility": {
+    "minimum": 10,
+    "verified": "10.288"
+  },
+  "authors": [{
+    "name": "kainashiCZ"
+  }],
+  "relationships": {
+    "systems": [{
+      "id": "dnd5e",
+      "type": "system",
+      "compatibility": {
+        "verified": "2.0.3"
+      }
+    }],
+    "requires": [{
+      "id": "foundry-cs-kai",
+      "type": "module"
+    }]
+  },
+  "styles": ["css/style.css"],
+
+  "languages": [
+    {
+      "lang": "cs",
+      "name": "Česky (Czech)",
+      "path": "lang/cs.json"
+    }
+  ]
+}
