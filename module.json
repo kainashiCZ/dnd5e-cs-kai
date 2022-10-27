@@ -31,5 +31,9 @@
       "name": "Česky (Czech)",
       "path": "lang/cs.json"
     }
-  ]
+  ],
+
+  "download": "https://github.com/kainashiCZ/foundry-cs-kai/archive/refs/tags/v0.3.0.zip",
+  "manifest": "https://raw.githubusercontent.com/kainashiCZ/dnd5e-cs-kai/main/module.json",
+  "url": "https://github.com/kainashiCZ/dnd5e-cs-kai/"
 }
