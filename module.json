@@ -1,7 +1,7 @@
 {
   "name": "dnd5e-cs-kai",
-  "title": "DnD5e - cs-CZ - Kai's invasive edition",
-  "description": "Add Czech language to DnD5e with better support for declension, gendered nouns etc.",
+  "title": "D&D 5e - cs-CZ - Kai's invasive edition",
+  "description": "Add Czech language to D&D 5e with better support for declension, gendered nouns etc.",
   "version": "0.3.0",
   "compatibility": {
     "minimum": 10,
