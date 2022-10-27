@@ -20,7 +20,8 @@
     }],
     "requires": [{
       "id": "foundry-cs-kai",
-      "type": "module"
+      "type": "module",
+      "manifest": "https://raw.githubusercontent.com/kainashiCZ/foundry-cs-kai/main/module.json"
     }]
   },
   "styles": ["css/style.css"],
