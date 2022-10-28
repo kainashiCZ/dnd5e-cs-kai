@@ -1,3 +1,4 @@
+/* Nahrazení písma kvůli podpoře češtiny */
 @font-face {
   font-family: 'Bebas Neue';
   font-style: normal;
@@ -25,8 +26,31 @@
   font-family: 'Bebas Neue', sans-serif !important;
 }
 
-/* sheet modifications */
-.dnd5e.sheet.item .weapon-properties label.checkbox {
+/* ************ */
+/* Úpravy listů */
+/* ************ */
+
+/* Aktér - obecné */
+.dnd5e.sheet.actor {
+
+}
+
+/* Aktér - postava */
+.dnd5e.sheet.actor.character {
+
+}
+
+/* Aktér - nehráčská postava */
+.dnd5e.sheet.actor.npc {
+
+}
+
+/* Aktér - vozidlo */
+.dnd5e.sheet.actor.vehicle {
+
+}
+
+/* .dnd5e.sheet.item .weapon-properties label.checkbox {
   flex: 0 0 120px !important;
 }
 
@@ -62,4 +86,4 @@
   line-height: 12px;
   padding-top: 3px;
   padding-bottom: 3px;
-}
+} */
