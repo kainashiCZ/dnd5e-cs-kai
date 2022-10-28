@@ -1,29 +1,16 @@
 Hooks.once('ready', () => {
-  // Okna aplikace
-  FoundryCZ.add('templates/sidebar/document-create.html', (data) => {
-    // typy položek
-    if ('types' in data) {
-      Object.keys(data.types).forEach(k => {
-        data.types[k] = data.types[k].firstDeclension()
+  /**
+   * Okno hodu kostkou
+   */
+  FoundryCZ.add('systems/dnd5e/templates/chat/roll-dialog.hbs', (data) => {
+    console.log(data)
+    if ('abilities' in data) {
+      // Je nutná shallow copy aby se neměnily původní překlady
+      const abilities = {...data.abilities}
+      Object.keys(abilities).forEach(k => {
+        abilities[k] = abilities[k].firstDeclension()
       })
+      data.abilities = abilities
     }
-  });
-
-  [
-    'background',
-    'backpack',
-    'class',
-    'consumable',
-    'equipment',
-    'feat',
-    'loot',
-    'spell',
-    'subclass',
-    'tool',
-    'weapon'
-  ].forEach(itemType => {
-    FoundryCZ.add(`systems/dnd5e/templates/items/${itemType}.hbs`, (data) => {
-      data.itemType = data.itemType?.firstDeclension()
-    })
   })
 })
