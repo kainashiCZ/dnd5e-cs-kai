@@ -3,7 +3,6 @@ Hooks.once('ready', () => {
    * Okno hodu kostkou
    */
   FoundryCZ.add('systems/dnd5e/templates/chat/roll-dialog.hbs', (data) => {
-    console.log(data)
     if ('abilities' in data) {
       // Je nutná shallow copy aby se neměnily původní překlady
       const abilities = { ...data.abilities }
@@ -11,6 +10,20 @@ Hooks.once('ready', () => {
         abilities[k] = abilities[k].firstDeclension()
       })
       data.abilities = abilities
+    }
+  });
+
+  /**
+   * Dialog spotřební věci
+   */
+  FoundryCZ.add('systems/dnd5e/templates/items/consumable.hbs', (data) => {
+    if ('consumableTypes' in data.config) {
+      // Je nutná shallow copy aby se neměnily původní překlady
+      const consumableTypes = { ...data.config.consumableTypes }
+      Object.keys(consumableTypes).forEach(k => {
+        consumableTypes[k] = consumableTypes[k].firstDeclension()
+      })
+      data.config.consumableTypes = consumableTypes
     }
   });
 

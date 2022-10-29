@@ -35,4 +35,28 @@ Hooks.once('ready', () => {
     this.configureModifiers();
     return this;
   }
+
+  /**
+   * Úprava chatových zpráv položek
+   */
+  CONFIG.Item.documentClass.prototype._consumableChatData = function(data, labels, props) {
+    props.push(
+      CONFIG.DND5E.consumableTypes[data.consumableType].firstDeclension(),
+      `${data.uses.value}/${data.uses.max} ${game.i18n.localize("DND5E.Charges").firstDeclension().toLocaleLowerCase()}`
+    );
+    data.hasCharges = data.uses.value >= 0;
+  }
+  CONFIG.Item.documentClass.prototype._equipmentChatData = function(data, labels, props) {
+    props.push(
+      CONFIG.DND5E.equipmentTypes[data.armor.type].firstDeclension(),
+      labels.armor || null,
+      data.stealth ? game.i18n.localize("DND5E.StealthDisadvantage") : null
+    );
+  }
+  CONFIG.Item.documentClass.prototype._toolChatData = function(data, labels, props) {
+    props.push(
+      CONFIG.DND5E.abilities[data.ability].firstDeclension() || null,
+      CONFIG.DND5E.proficiencyLevels[data.proficient || 0]
+    );
+  }
 })
