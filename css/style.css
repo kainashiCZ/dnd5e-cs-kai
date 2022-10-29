@@ -35,19 +35,46 @@
 
 }
 
+/* Tlačítko "přidat" */
+.dnd5e.sheet .items-list .item-controls,
+.dnd5e.sheet.actor .inventory .item-controls,
+.dnd5e.sheet.actor.character .spellbook .item-controls {
+  flex: 0 0 68px !important;
+}
+.dnd5e.sheet.actor .spellbook-empty .item-controls {
+  flex: 1 !important;
+}
+.dnd5e.sheet.actor .inventory-list .inventory-header .item-controls a.item-create {
+  flex: 0 0 100% !important;
+}
+
 /* Aktér - postava */
 .dnd5e.sheet.actor.character {
-
+  min-width: 800px;
 }
 
 /* Aktér - nehráčská postava */
 .dnd5e.sheet.actor.npc {
-
+  min-width: 630px;
 }
 
 /* Aktér - vozidlo */
 .dnd5e.sheet.actor.vehicle {
 
+}
+
+/* Položka - seznam vlastností */
+.dnd5e.sheet.item .sheet-body .item-properties .properties-list li {
+  line-height: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+/* Tlačítka */
+.dnd5e.chat-card .card-buttons button {
+  line-height: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 /* .dnd5e.sheet.item .weapon-properties label.checkbox {
@@ -61,29 +88,3 @@
 .dnd5e.sheet.actor h4.box-title {
   font-size: 16px !important;
 }
-
-.dnd5e.sheet .items-list .item-controls,
-.dnd5e.sheet.actor .inventory .item-controls,
-.dnd5e.sheet.actor.character .spellbook .item-controls {
-  flex: 0 0 68px !important;
-}
-
-.dnd5e.sheet.actor .ability-scores .ability .ability-modifiers span.ability-mod, .dnd5e.sheet.actor .ability-scores .ability .ability-modifiers span.ability-save {
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.dnd5e.sheet.actor .ability-scores .ability input.ability-score {
-  font-size: 22px;
-}
-.dnd5e.chat-card .card-buttons button {
-  line-height: 12px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.dnd5e.sheet.item .sheet-body .item-properties .properties-list li {
-  line-height: 12px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-} */
