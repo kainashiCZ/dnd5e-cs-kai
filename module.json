@@ -48,7 +48,7 @@
       "flags": {}
     }
   ],
-  "download": "https://github.com/kainashiCZ/foundry-cs-kai/archive/refs/tags/v0.6.0.zip",
+  "download": "https://github.com/kainashiCZ/foundry-cs-kai/archive/refs/tags/v0.6.1.zip",
   "manifest": "https://raw.githubusercontent.com/kainashiCZ/dnd5e-cs-kai/main/module.json",
   "url": "https://github.com/kainashiCZ/dnd5e-cs-kai/",
   "id": "dnd5e-cs-kai"
