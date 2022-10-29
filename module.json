@@ -1,7 +1,7 @@
 {
   "title": "D&D 5e - cs-CZ - Kai's edition",
   "description": "Add Czech language to D&amp;D 5e with better support for declension, gendered nouns etc.",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "compatibility": {
     "minimum": "10",
     "verified": "10.288"
@@ -48,7 +48,7 @@
       "flags": {}
     }
   ],
-  "download": "https://github.com/kainashiCZ/foundry-cs-kai/archive/refs/tags/v0.6.5.zip",
+  "download": "https://github.com/kainashiCZ/foundry-cs-kai/archive/refs/tags/v0.6.6.zip",
   "manifest": "https://raw.githubusercontent.com/kainashiCZ/dnd5e-cs-kai/main/module.json",
   "url": "https://github.com/kainashiCZ/dnd5e-cs-kai/",
   "id": "dnd5e-cs-kai"
