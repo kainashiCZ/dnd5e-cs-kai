@@ -77,6 +77,10 @@
   padding-bottom: 4px;
 }
 
+.dnd5e.advancement.flow form[data-type="HitPoints"] .rolls .rollButton {
+  line-heght: 1em;
+}
+
 /* .dnd5e.sheet.item .weapon-properties label.checkbox {
   flex: 0 0 120px !important;
 }
