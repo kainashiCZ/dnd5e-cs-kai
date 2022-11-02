@@ -1,15 +1,29 @@
+function declenseObject(data) {
+  // Je nutná shallow copy aby se neměnily původní překlady
+  const declensedData = { ...data }
+  Object.keys(data).forEach(k => {
+    declensedData[k] = declensedData[k].firstDeclension()
+  })
+
+  return declensedData
+}
+
 Hooks.once('ready', () => {
   /**
    * Okno hodu kostkou
    */
   FoundryCZ.add('systems/dnd5e/templates/chat/roll-dialog.hbs', (data) => {
     if ('abilities' in data) {
-      // Je nutná shallow copy aby se neměnily původní překlady
-      const abilities = { ...data.abilities }
-      Object.keys(abilities).forEach(k => {
-        abilities[k] = abilities[k].firstDeclension()
-      })
-      data.abilities = abilities
+      data.abilities = declenseObject(data.abilities)
+    }
+  });
+
+  /**
+   * Okno povolání
+   */
+  FoundryCZ.add('systems/dnd5e/templates/items/class.hbs', (data) => {
+    if ('abilities' in data.config) {
+      data.config.abilities = declenseObject(data.config.abilities)
     }
   });
 
@@ -18,15 +32,13 @@ Hooks.once('ready', () => {
    */
   FoundryCZ.add('systems/dnd5e/templates/items/consumable.hbs', (data) => {
     if ('consumableTypes' in data.config) {
-      // Je nutná shallow copy aby se neměnily původní překlady
-      const consumableTypes = { ...data.config.consumableTypes }
-      Object.keys(consumableTypes).forEach(k => {
-        consumableTypes[k] = consumableTypes[k].firstDeclension()
-      })
-      data.config.consumableTypes = consumableTypes
+      data.config.consumableTypes = declenseObject(data.config.consumableTypes)
     }
   });
 
+  /**
+   * Nahrazení překladu jednotky rychlosti
+   */
   [
     'character',
     'npc',
