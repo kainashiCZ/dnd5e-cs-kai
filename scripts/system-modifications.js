@@ -59,4 +59,10 @@ Hooks.once('ready', () => {
       CONFIG.DND5E.proficiencyLevels[data.proficient || 0]
     );
   }
+  CONFIG.Item.documentClass.prototype._lootChatData = function(data, labels, props) {
+    props.push(
+      game.i18n.localize("DND5E.ItemTypeLoot").firstDeclension(),
+      data.weight ? `${data.weight} ${game.i18n.localize("DND5E.AbbreviationLbs")}` : null
+    );
+  }
 })

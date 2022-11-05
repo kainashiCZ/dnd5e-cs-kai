@@ -9,6 +9,12 @@ function declenseObject(data) {
 }
 
 Hooks.once('ready', () => {
+
+  FoundryCZ.add('*')
+  FoundryCZ.add('systems/dnd5e/templates/apps/trait-selector.hbs', (data) => {
+
+  })
+
   /**
    * Okno hodu kostkou
    */
@@ -22,6 +28,15 @@ Hooks.once('ready', () => {
    * Okno povolání
    */
   FoundryCZ.add('systems/dnd5e/templates/items/class.hbs', (data) => {
+    if ('abilities' in data.config) {
+      data.config.abilities = declenseObject(data.config.abilities)
+    }
+  });
+
+  /**
+   * Okno nástrojů
+   */
+  FoundryCZ.add('systems/dnd5e/templates/items/tool.hbs', (data) => {
     if ('abilities' in data.config) {
       data.config.abilities = declenseObject(data.config.abilities)
     }
